@@ -10,6 +10,13 @@ namespace SCHM_API.Data
 
         }
 
-        public DbSet<AppTeacher>Teachers { get; set; }
+        public DbSet<AppTeacher> Teachers { get; set; }
+
+
+
+        public DbSet<AppCourses>Courses { get; set; }
+        public DbSet<AppStudent> Students { get; set; }
+
+
     }
 }
