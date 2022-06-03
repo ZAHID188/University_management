@@ -20,7 +20,6 @@ export class AppComponent implements OnInit{
 
   }
   ngOnInit() {
-    this.login()
     this.GetUser();
     
   }
@@ -50,16 +49,7 @@ export class AppComponent implements OnInit{
   // }
 
 
-    login(){
     
-    if(this.model.username == "admin" && this.model.email=="admin@gmail.com")
-    {
-      alert("done");
-      // this.router.navigate[('/admin')];
-    }
-    else{
-      alert("wrong");
-    }}
 
   
 }

@@ -6,8 +6,12 @@ import { AppComponent } from './app.component';
 import {HttpClientModule} from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavComponent } from './nav/nav.component';
-import { FormsModule } from '@angular/forms';
+import { FormControl, FormGroup, FormsModule } from '@angular/forms';
 import { AdminComponent } from './admin/admin.component';
+import { StudentLoginComponent } from './All_Login/student-login/student-login.component';
+import { TeacherLoginComponent } from './All_Login/teacher-login/teacher-login.component';
+import { AdminLoginComponent } from './All_Login/admin-login/admin-login.component';
+import { LoginComponent } from './All_Login/login/login.component';
 
 
 
@@ -16,6 +20,10 @@ import { AdminComponent } from './admin/admin.component';
     AppComponent,
     NavComponent,
     AdminComponent,
+    StudentLoginComponent,
+    TeacherLoginComponent,
+    AdminLoginComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -23,6 +31,8 @@ import { AdminComponent } from './admin/admin.component';
     HttpClientModule,
     BrowserAnimationsModule,
     FormsModule,
+    
+
   
   ],
   providers: [],
