@@ -15,10 +15,10 @@
 
 #### Asp.net core version 6 (webapi, entity frameworkcore 6.0.5, sqlserver version 6.0.5)
  
- 1. First open visual studio then open the sln file.
+ 1. First open visual studio(2022) then open the sln file.
  2. Then from nuget package manage solution install entityframeworkcore and sqlite
  3. open PMC run ``` add-migration createdb```
  4. then run ``` update-database```
  5. then ready to go just run the project
- 
+
  
