@@ -16,6 +16,8 @@ export class AdminComponent implements OnInit {
 
   ngOnInit(): void {
     this.GetTeacher();
+    this.GetStudent();
+    this.GetCourses();
     
   }
   GetTeacher(){
