@@ -1,8 +1,47 @@
-<p>teacher-manage works!</p>
+<form
+  #teacherForm="ngForm"
+  (ngSubmit)="onAdd(teacherForm.value)"
+  autocomplete="off"
+>
+  <h1>Add New Teacher</h1>
+  <div class="form-floating">
+    <input type="text" class="form-control" name="name" ngModel />
 
-Teacher list
-<div>
-  <ul>
-    <li *ngFor="let th of teachers">{{ th.name }} - {{ th.email }}</li>
-  </ul>
-</div>
+    <label for="floatingPassword">Teacher Name</label>
+  </div>
+  <input type="text" class="form-control" name="identity" hidden="true" [(ngModel)]="model"/>
+  <div class="form-floating">
+    <input type="email" class="form-control" name="email" ngModel />
+
+    <label for="floatingInput">Email address</label>
+  </div>
+
+  <button class="w-100 btn btn-lg btn-primary" type="submit">
+    {{ editMode ? "Update Teacher" : "Add New Teacher" }}
+  </button>
+</form>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">No</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let th of teachers; index as i">
+      <td>{{ i + 1 }}</td>
+      <td>{{ th.name }}</td>
+      <td>{{ th.email }}</td>
+      <td>
+        <button class="btn-edit" (click)="onEdit(th.identity)">Edit</button>
+      </td>
+      <td>
+        <button class="btn-delete" (click)="onDelete(th.identity)">
+          Delete
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

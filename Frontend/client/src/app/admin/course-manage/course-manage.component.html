@@ -1,9 +1,64 @@
-<p>course-manage works!</p>
-courses list
-      <div>
-        <ul>
-          <li *ngFor="let cs of courses">
-            {{ cs.courseName }} - {{ cs.code }} -{{ cs.courseDescrpition }}
-          </li>
-        </ul>
-      </div>
+<form
+  #courseForm="ngForm"
+  (ngSubmit)="onAdd(courseForm.value)"
+  autocomplete="off"
+>
+  <h1>Add New Course</h1>
+  <div class="form-floating">
+    <input type="text" class="form-control" name="code" ngModel />
+
+    <label for="floatingPassword">Course Code</label>
+  </div>
+  <input
+    type="text"
+    class="form-control"
+    name="id"
+    hidden="true"
+    [(ngModel)]="zero"
+  />
+  <div class="form-floating">
+    <input type="text" class="form-control" name="courseName" ngModel />
+
+    <label for="floatingInput">Course Name</label>
+  </div>
+
+  <div class="form-floating">
+    <input type="text" class="form-control" name="courseDescrpition" ngModel />
+
+    <label for="floatingInput">Course Description</label>
+  </div>
+
+  <button class="w-100 btn btn-lg btn-primary" type="submit">
+    {{ editMode ? "Update Course" : " Add A Course" }}
+  </button>
+</form>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">No.</th>
+      <th scope="col">Code</th>
+      <th scope="col">Course Name</th>
+      <th scope="col">Course Descrpition</th>
+      <th scope="col">Options</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let th of courses; index as i">
+      <td>{{ i + 1 }}</td>
+      <td>{{ th.code }}</td>
+      <td>{{ th.courseName }}</td>
+      <td>{{ th.courseDescrpition }}</td>
+
+      <td>
+        <button class="btn-edit" (click)="onEdit(th.id)">Edit</button>
+      </td>
+      <td>
+        <button class="btn-delete" (click)="onDelete(th.id)">
+          Delete
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import {HttpClientModule} from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavComponent } from './nav/nav.component';
-import { FormControl, FormGroup, FormsModule } from '@angular/forms';
+import {  FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AdminComponent } from './admin/admin.component';
 import { StudentLoginComponent } from './All_Login/student-login/student-login.component';
 import { TeacherLoginComponent } from './All_Login/teacher-login/teacher-login.component';
@@ -15,6 +15,7 @@ import { LoginComponent } from './All_Login/login/login.component';
 import { StudentManageComponent } from './admin/student-manage/student-manage.component';
 import { TeacherManageComponent } from './admin/teacher-manage/teacher-manage.component';
 import { CourseManageComponent } from './admin/course-manage/course-manage.component';
+
 
 
 
@@ -30,6 +31,7 @@ import { CourseManageComponent } from './admin/course-manage/course-manage.compo
     StudentManageComponent,
     TeacherManageComponent,
     CourseManageComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -37,6 +39,7 @@ import { CourseManageComponent } from './admin/course-manage/course-manage.compo
     HttpClientModule,
     BrowserAnimationsModule,
     FormsModule,
+    ReactiveFormsModule 
     
 
   

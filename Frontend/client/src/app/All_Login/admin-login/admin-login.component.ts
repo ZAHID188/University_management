@@ -10,12 +10,14 @@ import { Router } from '@angular/router';
 export class AdminLoginComponent implements OnInit {
 
   model:any={}
+  temp:any;
 
 
   constructor(private router:Router) {  }
 
   ngOnInit(): void {
-
+    this.model.username='admin';
+    this.model.email='admin@gmail.com';
   }
 
 
@@ -23,7 +25,6 @@ export class AdminLoginComponent implements OnInit {
     
     if(this.model.username == "admin" && this.model.email=="admin@gmail.com")
     {
-      alert("done");
       this.router.navigate(['/admin']);
     }}
 
