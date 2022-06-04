@@ -12,6 +12,9 @@ import { StudentLoginComponent } from './All_Login/student-login/student-login.c
 import { TeacherLoginComponent } from './All_Login/teacher-login/teacher-login.component';
 import { AdminLoginComponent } from './All_Login/admin-login/admin-login.component';
 import { LoginComponent } from './All_Login/login/login.component';
+import { StudentManageComponent } from './admin/student-manage/student-manage.component';
+import { TeacherManageComponent } from './admin/teacher-manage/teacher-manage.component';
+import { CourseManageComponent } from './admin/course-manage/course-manage.component';
 
 
 
@@ -24,6 +27,9 @@ import { LoginComponent } from './All_Login/login/login.component';
     TeacherLoginComponent,
     AdminLoginComponent,
     LoginComponent,
+    StudentManageComponent,
+    TeacherManageComponent,
+    CourseManageComponent,
   ],
   imports: [
     BrowserModule,

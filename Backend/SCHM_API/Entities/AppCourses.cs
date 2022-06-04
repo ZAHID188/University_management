@@ -14,7 +14,7 @@ namespace SCHM_API.Entities
         public string CourseName { get; set; }
         public string CourseDescrpition { get; set; }
 
-        [ForeignKey("students")]
+       /* [ForeignKey("students")]
 
         public int studentsEnrolled { get; set; }
 
@@ -24,7 +24,7 @@ namespace SCHM_API.Entities
 
         public virtual AppStudent students { get; set; }
         public virtual AppTeacher teachers{ get; set; }
-
+       */
 
     }
 }

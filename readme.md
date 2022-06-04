@@ -13,15 +13,19 @@
 
 ## Backend 
 
-#### Asp.net core version 6 (webapi, entity frameworkcore 6.0.5, sqlserver version 6.0.5)
+### Asp.net core (version 6 )
+
+### Packages 
+![plot](./temp/package.png)
  
+ ## Process to run the project.
  1. First open visual studio(2022) then open the sln file.
- 2. Then from nuget package manage solution install entityframeworkcore and sqlite
+ 2. Then from nuget package manage solution install entityframeworkcore, sqlite, tools the exact package version provided.
  3. open PMC run ``` add-migration createdb```
  4. then run ``` update-database```
- 5. then ready to go just run the project
+ 5. then ready to go just run the project.
+ 6. After running the project there will be swagger UI interface there we can test our api.
 
- When we run the project we will see that there is swagger UI interface there we can test our api
 
  ## Frontend
 

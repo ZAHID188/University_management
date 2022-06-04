@@ -1,40 +1,16 @@
-
-
 <div class="container">
-    <div class="row justify-content-md-center">
-      <div class="col-md-4">
-
-
-        Teacher list
-        <div>
-            <ul>
-                <li *ngFor="let th of teachers">{{th.name}} - {{th.email}}</li>
-            </ul>
-            </div>
-      </div>
-
-
-      <div class="col-md-4">
-
-        Student list
-        <div>
-            <ul>
-                <li *ngFor="let th of students">{{th.name}} - {{th.email}}</li>
-            </ul>
-            </div>
-         
-      </div>
-     
-      <div class="col-md-4">
-        courses list
-        <div>
-            <ul>
-                <li *ngFor="let cs of courses">{{cs.courseName}} - {{cs.code}} -{{cs.courseDescrpition}}</li>
-            </ul>
-            </div>
- 
-      </div>
+  <div class="row justify-content-md-center">
+    <div class="col-md-4">
+      <app-teacher-manage></app-teacher-manage>
     </div>
-   
 
+    <div class="col-md-4">
+      <app-student-manage></app-student-manage>
+    </div>
 
+    <div class="col-md-4">
+      <app-course-manage></app-course-manage>
+    </div>
+  </div>
+</div>
+  
