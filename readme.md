@@ -11,9 +11,9 @@
 
 ![plot](./temp/planning.png)
 
-## Backend 
+## Backend (API)
 
-### Asp.net core (version 6 )
+### Asp.net core webapi (version 6 )
 
 ### Packages 
 ![plot](./temp/package.png)

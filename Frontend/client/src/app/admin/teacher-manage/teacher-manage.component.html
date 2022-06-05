@@ -1,27 +1,42 @@
-<form
-  #teacherForm="ngForm"
-  (ngSubmit)="onAdd(teacherForm.value)"
-  autocomplete="off"
->
-  <h4>Add New Teacher</h4>
-  <div class="form-floating">
-    <input type="text" class="form-control" name="name" ngModel />
+<div class="container">
+  <div class="row justify-content-md-center">
+    <div class="col-md-4"></div>
 
-    <label for="floatingPassword">Teacher Name</label>
+    <div class="col-md-4">
+      <form
+        #teacherForm="ngForm"
+        (ngSubmit)="onAdd(teacherForm.value)"
+        autocomplete="off"
+      >
+        
+        <div class="form-floating">
+          <input type="text" class="form-control" name="name" ngModel />
+
+          <label for="floatingPassword">Teacher Name</label>
+        </div>
+        <input
+          type="text"
+          class="form-control"
+          name="identity"
+          hidden="true"
+          [(ngModel)]="model"
+        />
+        <div class="form-floating">
+          <input type="email" class="form-control" name="email" ngModel />
+
+          <label for="floatingInput">Email address</label>
+        </div>
+
+        <button class="w-100 btn btn-lg btn-primary" type="submit">
+          {{ editMode ? "Update Teacher" : "Add New Teacher" }}
+        </button>
+      </form>
+    </div>
+    <div class="col-md-4"></div>
   </div>
-  <input type="text" class="form-control" name="identity" hidden="true" [(ngModel)]="model"/>
-  <div class="form-floating">
-    <input type="email" class="form-control" name="email" ngModel />
+</div>
 
-    <label for="floatingInput">Email address</label>
-  </div>
-
-  <button class="w-100 btn btn-lg btn-primary" type="submit">
-    {{ editMode ? "Update Teacher" : "Add New Teacher" }}
-  </button>
-</form>
-
-<br>
+<br />
 
 <div class="d-flex justify-content-center">Teacher list</div>
 

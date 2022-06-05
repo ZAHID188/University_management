@@ -1,38 +1,52 @@
-<form
-  #courseForm="ngForm"
-  (ngSubmit)="onAdd(courseForm.value)"
-  autocomplete="off"
->
-  <h4>Add New Course</h4>
-  <div class="form-floating">
-    <input type="text" class="form-control" name="code" ngModel />
+<div class="container">
+  <div class="row justify-content-md-center">
+    <div class="col-md-4"></div>
 
-    <label for="floatingPassword">Course Code</label>
+    <div class="col-md-4">
+      <form
+        #courseForm="ngForm"
+        (ngSubmit)="onAdd(courseForm.value)"
+        autocomplete="off"
+      >
+       
+        <div class="form-floating">
+          <input type="text" class="form-control" name="code" ngModel />
+
+          <label for="floatingPassword">Course Code</label>
+        </div>
+        <input
+          type="text"
+          class="form-control"
+          name="id"
+          hidden="true"
+          [(ngModel)]="zero"
+        />
+        <div class="form-floating">
+          <input type="text" class="form-control" name="courseName" ngModel />
+
+          <label for="floatingInput">Course Name</label>
+        </div>
+
+        <div class="form-floating">
+          <input
+            type="text"
+            class="form-control"
+            name="courseDescrpition"
+            ngModel
+          />
+
+          <label for="floatingInput">Course Description</label>
+        </div>
+
+        <button class="w-100 btn btn-lg btn-primary" type="submit">
+          {{ editMode ? "Update Course" : " Add A Course" }}
+        </button>
+      </form>
+    </div>
+    <div class="col-md-4"></div>
   </div>
-  <input
-    type="text"
-    class="form-control"
-    name="id"
-    hidden="true"
-    [(ngModel)]="zero"
-  />
-  <div class="form-floating">
-    <input type="text" class="form-control" name="courseName" ngModel />
-
-    <label for="floatingInput">Course Name</label>
-  </div>
-
-  <div class="form-floating">
-    <input type="text" class="form-control" name="courseDescrpition" ngModel />
-
-    <label for="floatingInput">Course Description</label>
-  </div>
-
-  <button class="w-100 btn btn-lg btn-primary" type="submit">
-    {{ editMode ? "Update Course" : " Add A Course" }}
-  </button>
-</form>
-<br>
+</div>
+<br />
 
 <div class="d-flex justify-content-center">Course list</div>
 
@@ -44,7 +58,6 @@
       <th scope="col">Course Name</th>
       <th scope="col">Course Descrpition</th>
       <th scope="col">Options</th>
-
     </tr>
   </thead>
   <tbody>
@@ -58,9 +71,7 @@
         <button class="btn-edit" (click)="onEdit(th.id)">Edit</button>
       </td>
       <td>
-        <button class="btn-delete" (click)="onDelete(th.id)">
-          Delete
-        </button>
+        <button class="btn-delete" (click)="onDelete(th.id)">Delete</button>
       </td>
     </tr>
   </tbody>

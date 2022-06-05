@@ -1,5 +1,5 @@
 
-<a [routerLink]="['']" [queryParams]="{debug: true}" fragment="education">
+<a [routerLink]="['']" [queryParams]="{debug: true}" fragment="education" *ngIf="login_service.isLoggedIn | async">
     <h5>Logout</h5>
   </a>
 

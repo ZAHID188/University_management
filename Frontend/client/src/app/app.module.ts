@@ -16,6 +16,7 @@ import { StudentManageComponent } from './admin/student-manage/student-manage.co
 import { TeacherManageComponent } from './admin/teacher-manage/teacher-manage.component';
 import { CourseManageComponent } from './admin/course-manage/course-manage.component';
 import { StudentComponent } from './student/student.component';
+import { CommonModule } from '@angular/common';
 
 
 
@@ -41,7 +42,8 @@ import { StudentComponent } from './student/student.component';
     HttpClientModule,
     BrowserAnimationsModule,
     FormsModule,
-    ReactiveFormsModule 
+    ReactiveFormsModule,
+    CommonModule
     
 
   
