@@ -10,7 +10,7 @@
 
          <!----->
        <main class="form-signin">
-        <form #loginForm="ngForm" (ngSubmit)="login()" autocomplete="off">
+        <form #studentLoginForm="ngForm" (ngSubmit)="login(studentLoginForm.value)" autocomplete="off">
                 <h1> Student Login</h1>
             <div class="form-floating">
                 <input type="text" 
@@ -23,6 +23,9 @@
 
                 <label for="floatingPassword">User Name</label>
               </div>
+
+  <input type="text" class="form-control" name="identitity" hidden="true" [(ngModel)]="model.zero">
+
 
           <div class="form-floating">
             <input type="email" 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginService } from '../login/login.service';
 
 @Component({
   selector: 'app-student-login',
@@ -8,17 +9,28 @@ import { Component, OnInit } from '@angular/core';
 export class StudentLoginComponent implements OnInit {
   model:any={}
 
-  constructor() { }
+  constructor(private login_service:LoginService) { }
 
   ngOnInit(): void {
+  this.model.username="zahid",
+  this.model.email="zahid@gmail.com"
+  this.model.zero=0;
   }
 
-  login(){
+  login(data:any){
+
+    this.login_service.studentLogin(data).subscribe(x=>{
+      console.log(x);
+    },(error) => {
+      console.log(error);
+    }
+     )
+  }
     
-    if(this.model.username == "admin" && this.model.email=="admin@gmail.com")
-    {
-      alert("done");
-      // this.router.navigate[('/admin')];
-    }}
+    // if(this.model.username == "admin" && this.model.email=="admin@gmail.com")
+    // {
+    //   alert("done");
+    //   // this.router.navigate[('/admin')];
+    // }}
 
 }
