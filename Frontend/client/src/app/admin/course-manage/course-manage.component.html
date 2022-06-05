@@ -3,7 +3,7 @@
   (ngSubmit)="onAdd(courseForm.value)"
   autocomplete="off"
 >
-  <h1>Add New Course</h1>
+  <h4>Add New Course</h4>
   <div class="form-floating">
     <input type="text" class="form-control" name="code" ngModel />
 
@@ -32,6 +32,9 @@
     {{ editMode ? "Update Course" : " Add A Course" }}
   </button>
 </form>
+<br>
+
+<div class="d-flex justify-content-center">Course list</div>
 
 <table class="table">
   <thead>

@@ -1,8 +1,54 @@
 
 
-Student list
-<div>
-  <ul>
-    <li *ngFor="let th of students">{{ th.name }} - {{ th.email }}</li>
-  </ul>
-</div>
+<form
+  #studentForm="ngForm"
+  (ngSubmit)="onAdd(studentForm.value)"
+  autocomplete="off"
+>
+  <h4>Add New Student</h4>
+  <div class="form-floating">
+    <input type="text" class="form-control" name="name" ngModel />
+
+    <label for="floatingPassword">Student Name</label>
+  </div>
+  <input type="text" class="form-control" name="identitity" hidden="true" [(ngModel)]="zero"/>
+  <div class="form-floating">
+    <input type="email" class="form-control" name="email" ngModel />
+
+    <label for="floatingInput">Email address</label>
+  </div>
+
+  <button class="w-100 btn btn-lg btn-primary" type="submit">
+    {{ editMode ? "Update Student" : "Add New Student" }}
+  </button>
+</form>
+
+<br>
+
+<div class="d-flex justify-content-center">Student list</div>
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">No</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let st of students; index as i">
+      <td>{{ i + 1 }}</td>
+      <td>{{ st.name }}</td>
+      <td>{{ st.email }}</td>
+      <td>
+        <button class="btn-edit" (click)="onEdit(st.identitity)">Edit</button>
+      </td>
+      <td>
+        <button class="btn-delete" (click)="onDelete(st.identitity)">
+          Delete
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
