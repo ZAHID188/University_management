@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { LoginService } from '../login/login.service';
 
 @Component({
@@ -9,20 +10,21 @@ import { LoginService } from '../login/login.service';
 export class StudentLoginComponent implements OnInit {
   model:any={}
 
-  constructor(private login_service:LoginService) { }
+  constructor(private login_service:LoginService, private router:Router) { }
 
   ngOnInit(): void {
-  this.model.username="zahid",
+  this.model.name="zahid",
   this.model.email="zahid@gmail.com"
-  this.model.zero=0;
+  this.model.identitity=0;
   }
 
   login(data:any){
 
     this.login_service.studentLogin(data).subscribe(x=>{
-      console.log(x);
+      this.router.navigate(['/student']);
     },(error) => {
       console.log(error);
+      alert('Wrong Credential');
     }
      )
   }

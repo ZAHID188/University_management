@@ -11,7 +11,7 @@ export class LoginService {
 
   constructor(private http:HttpClient) { }
 
-  studentLogin(data):Observable<any>{
+  studentLogin(data:any){
     return this.http.post(this.url,data)
   }
 }

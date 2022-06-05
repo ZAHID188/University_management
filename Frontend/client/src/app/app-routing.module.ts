@@ -7,12 +7,14 @@ import { StudentLoginComponent } from './All_Login/student-login/student-login.c
 import { TeacherLoginComponent } from './All_Login/teacher-login/teacher-login.component';
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
+import { StudentComponent } from './student/student.component';
 
 const routes: Routes = [
   // {path:'',component:AppComponent},
   // {path:'nav',component:NavComponent},
   {path: '',component:LoginComponent},
   {path:'admin',component:AdminComponent},
+  {path:'student',component:StudentComponent},
   {path:'adminlogin',component:AdminLoginComponent},
   {path:'studentlogin',component:StudentLoginComponent},
   {path:'teacherlogin',component:TeacherLoginComponent}

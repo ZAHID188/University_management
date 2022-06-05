@@ -15,6 +15,7 @@ import { LoginComponent } from './All_Login/login/login.component';
 import { StudentManageComponent } from './admin/student-manage/student-manage.component';
 import { TeacherManageComponent } from './admin/teacher-manage/teacher-manage.component';
 import { CourseManageComponent } from './admin/course-manage/course-manage.component';
+import { StudentComponent } from './student/student.component';
 
 
 
@@ -31,6 +32,7 @@ import { CourseManageComponent } from './admin/course-manage/course-manage.compo
     StudentManageComponent,
     TeacherManageComponent,
     CourseManageComponent,
+    StudentComponent,
 
   ],
   imports: [
