@@ -37,5 +37,34 @@ namespace SCHM_API.Controllers
             return Unauthorized();
 
         }
+
+
+        [HttpPost, Route("TeacherLogin")]
+        public IActionResult ThLogin([FromBody] AppTeacher teacher)
+        {
+            if (teacher == null)
+            {
+                return BadRequest("invalid");
+            }
+            if (teacher.Name == "simon" && teacher.Email == "simon@gmail.com")
+            {
+                var secretKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("supersecretkeyChange"));
+                var signinCredential = new SigningCredentials(secretKey, SecurityAlgorithms.HmacSha256);
+                var tokenoption = new JwtSecurityToken(
+                    issuer: "http://localhost:4200",
+                    audience: "http://localhost:4200",
+                    claims: new List<Claim>(),
+                    expires: DateTime.UtcNow.AddMinutes(5),
+                    signingCredentials: signinCredential
+                    );
+                var tokenString = new JwtSecurityTokenHandler().WriteToken(tokenoption);
+                return Ok(new { Token = tokenString });
+            }
+
+            return Unauthorized();
+
+        }
+
+
     }
 }

@@ -8,7 +8,7 @@ import { LoginService } from '../All_Login/login/login.service';
 })
 export class StudentComponent implements OnInit {
 
-  constructor(public login_service:LoginService) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
