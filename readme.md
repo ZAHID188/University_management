@@ -38,3 +38,14 @@ npm install will install all of the node modules we need for this project.
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
+
+# Output--
+## Admin Panel CRUD through API
+
+![plot](./temp/part1.gif)
+
+## JWT token Output
+![plot](./temp/part1.gif)
+
+
+
