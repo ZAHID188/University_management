@@ -45,7 +45,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 ![plot](./temp/part1.gif)
 
 ## JWT token Output
-![plot](./temp/part1.gif)
+![plot](./temp/part2.gif)
 
 
 
