@@ -8,6 +8,7 @@ import { TeacherLoginComponent } from './All_Login/teacher-login/teacher-login.c
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { StudentComponent } from './student/student.component';
+import { TeacherComponent } from './teacher/teacher.component';
 
 const routes: Routes = [
   // {path:'',component:AppComponent},
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path: '',component:LoginComponent},
   {path:'admin',component:AdminComponent},
   {path:'student',component:StudentComponent},
+  {path:'teacher',component:TeacherComponent},
   {path:'adminlogin',component:AdminLoginComponent},
   {path:'studentlogin',component:StudentLoginComponent},
   {path:'teacherlogin',component:TeacherLoginComponent}

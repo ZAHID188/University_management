@@ -17,6 +17,7 @@ import { TeacherManageComponent } from './admin/teacher-manage/teacher-manage.co
 import { CourseManageComponent } from './admin/course-manage/course-manage.component';
 import { StudentComponent } from './student/student.component';
 import { CommonModule } from '@angular/common';
+import { TeacherComponent } from './teacher/teacher.component';
 
 
 
@@ -34,6 +35,7 @@ import { CommonModule } from '@angular/common';
     TeacherManageComponent,
     CourseManageComponent,
     StudentComponent,
+    TeacherComponent,
 
   ],
   imports: [

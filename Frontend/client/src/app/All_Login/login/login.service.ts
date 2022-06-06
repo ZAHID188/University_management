@@ -7,7 +7,7 @@ import { BehaviorSubject, Observable, tap } from 'rxjs';
 })
 export class LoginService {
 
-  url='https://localhost:7187/api/auth/StudentLogin';
+  url='https://localhost:7187/api/auth/';
   private _isLoggedIn=new BehaviorSubject<boolean>(false);
   isLoggedIn=this._isLoggedIn.asObservable();
 
@@ -24,7 +24,17 @@ export class LoginService {
 
 
   studentLogin(data:any){
-    return this.http.post(this.url,data).pipe(
+    return this.http.post(this.url+'StudentLogin',data).pipe(
+      tap((response:any)=>{ 
+        this._isLoggedIn.next(true);
+        localStorage.setItem('login_Info',response.token);
+        console.log(response.token);
+      })
+    )
+  }
+
+  teacherLogin(data:any){
+    return this.http.post(this.url+'TeacherLogin',data).pipe(
       tap((response:any)=>{ 
         this._isLoggedIn.next(true);
         localStorage.setItem('login_Info',response.token);

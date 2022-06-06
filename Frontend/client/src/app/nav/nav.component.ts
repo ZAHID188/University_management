@@ -22,8 +22,6 @@ export class NavComponent implements OnInit {
     const x=localStorage.removeItem('login_Info');
     this.login_service.isLoggedIn=null;
     this.router.navigate(['']);
- 
- 
 
   }
 
